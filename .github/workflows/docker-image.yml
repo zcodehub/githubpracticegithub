@@ -18,5 +18,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag zcodehub/githubpracticegithub:latest
     - name: push the docker image
-      run:  echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin && docker push zcodehub/githubpracticegithub:latest
+      run:  echo ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME2 }} --password-stdin && docker push zcodehub/githubpracticegithub:latest
       
